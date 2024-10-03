@@ -36,15 +36,15 @@ Step 2: Start Flask Server at Boot on Raspberry Pi
 
 2.Add the Following Configuration: Replace /path/to/your/app (/home/pi/my_flask_project) and app.py with the actual path and name of your Flask application file.
 
-[Unit]
-Description=Flask Application
-After=network.target
-
-[Service]
-User=pi
-WorkingDirectory=/path/to/your/app
-ExecStart=/usr/bin/python3 app.py
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
+  [Unit]
+  Description=Flask Application
+  After=network.target
+  
+  [Service]
+  User=pi
+  WorkingDirectory=/path/to/your/app
+  ExecStart=/usr/bin/python3 app.py
+  Restart=always
+  
+  [Install]
+  WantedBy=multi-user.target
