@@ -1,0 +1,85 @@
+/* Appliquer Flexbox sur tout le body */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper pour tout le contenu, sauf le footer */
+.flex-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Assurer que le main prend tout l'espace disponible */
+main.content {
+    flex: 1;
+}
+
+/* Styles existants */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.relay-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.relay-box {
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 45%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Couleur par défaut 
+button:hover {
+    background-color: #0056b3;
+}
+*/
+
+button:hover {
+    background-color: green; /* Changer en vert au survol */
+}
+
+button:active {
+    background-color: darkgreen; /* Couleur lorsque le bouton est cliqué */
+}
+p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    width: 100%;
+}
+
