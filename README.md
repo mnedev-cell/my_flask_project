@@ -31,25 +31,49 @@ To run this project, you will need:
 
 ## Installation Service Flask
 
-Step 2: Start Flask Server at Boot on Raspberry Pi
+Start Flask Server at Boot on Raspberry Pi
 
-1.Create a Systemd Service File: Open a terminal and create a new service file:
+- Create a Systemd Service File: Open a terminal and create a new service file:
   sudo nano /etc/systemd/system/flaskapp.service
-
-2.Add the Following Configuration: 
-
-Replace /path/to/your/app (/home/pi/my_flask_project) and app.py 
-with the actual path and name of your Flask application file.
-
-  [Unit]
-  Description=Flask Application
-  After=network.target
   
-  [Service]
-  User=pi
-  WorkingDirectory=/path/to/your/app
-  ExecStart=/usr/bin/python3 app.py
-  Restart=always
+  Add the Following Configuration: 
+
+      [Unit]
+      Description=Flask Application
+      After=network.target
+      
+      [Service]
+      User=pi
+      WorkingDirectory=/path/to/your/app   #  Replace /path/to/your/app (/home/pi/my_flask_project
+      ExecStart=/usr/bin/python3 app.py    #  Replace app.py /home/pi/my_flask_project/app.py
+      Restart=always
+      StandardOutput=journal
+      StandardError=journal
+      SyslogIdentifier=flaskapp_service
+
+      
+      [Install]
+      WantedBy=multi-user.target
+
+ - Reload systemd daemon to recognize the new service
+    sudo systemctl daemon-reload
+
+- Start the service flaskapp
+  sudo systemctl start flaskapp
   
-  [Install]
-  WantedBy=multi-user.target
+- check status flaskapp
+  sudo systemctl status flaskapp
+
+- enable service flaskapp
+  sudo systemctl enable flaskapp
+
+- disable service flaskapp
+   sudo systemctl disable flaskapp
+  
+- stop the service flaskapp
+   sudo systemctl stop flaskapp
+  
+- Restart the service
+  sudo systemctl restart flaskapp
+
+
