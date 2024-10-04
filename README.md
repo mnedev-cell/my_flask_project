@@ -29,12 +29,17 @@ To run this project, you will need:
 3.Run the Flask application:
   python app.py
 
+## Installation Service Flask
+
 Step 2: Start Flask Server at Boot on Raspberry Pi
 
 1.Create a Systemd Service File: Open a terminal and create a new service file:
   sudo nano /etc/systemd/system/flaskapp.service
 
-2.Add the Following Configuration: Replace /path/to/your/app (/home/pi/my_flask_project) and app.py with the actual path and name of your Flask application file.
+2.Add the Following Configuration: 
+
+Replace /path/to/your/app (/home/pi/my_flask_project) and app.py 
+with the actual path and name of your Flask application file.
 
   [Unit]
   Description=Flask Application
