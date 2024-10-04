@@ -56,8 +56,8 @@ Start Flask Server at Boot on Raspberry Pi
       WantedBy=multi-user.target
 
  - Reload systemd daemon to recognize the new service
- - ```shell
- sudo systemctl daemon-reload
+```shell
+sudo systemctl daemon-reload
 ```
 
 - Start the service flaskapp
