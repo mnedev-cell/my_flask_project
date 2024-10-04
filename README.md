@@ -61,21 +61,37 @@ sudo systemctl daemon-reload
 ```
 
 - Start the service flaskapp
+```shell
   sudo systemctl start flaskapp
+```
+
   
 - check status flaskapp
-  sudo systemctl status flaskapp
+```shell
+   sudo systemctl status flaskapp
+```
 
 - enable service flaskapp
-  sudo systemctl enable flaskapp
+```shell
+    sudo systemctl enable flaskapp
+```
+ 
 
 - disable service flaskapp
-   sudo systemctl disable flaskapp
+```shell
+     sudo systemctl disable flaskapp
+```
   
 - stop the service flaskapp
-   sudo systemctl stop flaskapp
+```shell
+    sudo systemctl stop flaskapp
+```
+   
   
 - Restart the service
-  sudo systemctl restart flaskapp
+```shell
+    sudo systemctl restart flaskapp
+```
+ 
 
 
