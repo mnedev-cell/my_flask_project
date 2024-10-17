@@ -21,10 +21,13 @@ To run this project, you will need:
 ## Installation
 
 1. Clone the repository:
-   ```shell
+```shell
   git clone https://github.com/mnedev-cell/my_flask_project.git
+```
+
+```shell
   cd my_flask_project
-     ```
+```
 
 2.Install dependencies:
 ```shell
