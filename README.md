@@ -32,9 +32,10 @@ To run this project, you will need:
 2.Install dependencies:
 ```shell
   pip install -r requirements.txt
-    ```
+```
 
 3.Run the Flask application:
+
 ```shell
   python app.py
   ```
