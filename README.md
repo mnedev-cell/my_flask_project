@@ -1,6 +1,7 @@
 # My Flask Project
 
-This is a Flask application designed to control relay 1 and relay 2, which can be used for home automation or other control systems. The project is hosted on a Raspberry Pi 4 and can be used to trigger relays via a web interface.
+This is a Flask application designed to control relay 1 and relay 2, which can be used for home automation or other control systems.
+The project is hosted on a Raspberry Pi 4 and can be used to trigger relays via a web interface.
 
 ## Features
 
@@ -34,8 +35,10 @@ To run this project, you will need:
 Start Flask Server at Boot on Raspberry Pi
 
 - Create a Systemd Service File: Open a terminal and create a new service file:
+```shell
   sudo nano /etc/systemd/system/flaskapp.service
-  
+  ```
+
   Add the Following Configuration: 
 
       [Unit]
